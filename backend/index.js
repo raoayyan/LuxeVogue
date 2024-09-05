@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const express = require('express')
 const cors = require('cors')
-const mongoose = require("mongoose");
+
 const register = require("./routes/register")
 const bodyParser = require('body-parser');
 const login = require("./routes/login")
@@ -11,6 +11,11 @@ const stripe = require("./routes/stripe")
 const productsRoute = require("./routes/product")
 const products = require('./products');
 const  order = require("./routes/orders");
+const connectDb = require("./config/dbConnection")
+
+
+connectDb();
+
 const app =  express();
 
 
@@ -37,14 +42,5 @@ app.get("/products",(req,res)=>{
 
 
 const port = process.env.PORT || 5000
-const uri = process.env.DB_URL;
-mongoose.connect(uri,{
-    useNewUrlParser: true,
-    useUnifiedTopology:true,
-
-
-}).then(()=> console.log("Mongodb connection successfull"))
-.catch((err)=> console.error(err));
-
 
 app.listen(port,console.log(`server running on port ${port}`))
