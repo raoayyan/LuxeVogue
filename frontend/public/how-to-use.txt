@@ -1,0 +1,72 @@
+Step-by-Step Guide for a User Visiting Skyline Electronics E-commerce Website
+
+1. Accessing the Website
+1.	Open a Web Browser:
+o	Launch your preferred web browser (e.g., Chrome, Firefox, Safari, Edge).
+2.	Navigate to Skyline Electronics:
+o	In the address bar, type www.skylineelectronics.com and press Enter.
+2. Exploring the Home Page
+1.	Welcome Message:
+o	Upon arriving, you will see a welcome message and featured products on the home page.
+2.	Navigation Bar:
+o	The top navigation bar includes links to different categories, a search bar, and login/register options.
+3.	Search for Products:
+o	Use the search bar at the top to find specific products by typing keywords (e.g., "laptop", "smartphone").
+4.	Browse Categories:
+o	Click on category links (e.g., "Laptops", "Mobile Phones") to explore different product categories.
+3. Viewing Product Details
+1.	Select a Product:
+o	Click on a product image or name to view its details.
+2.	Product Page:
+o	The product page displays images, specifications, price, reviews, and availability.
+3.	Interactive Features:
+o	Use the SmartProductDisplay widget to view multiple images, read descriptions, select quantities, and see related products.
+4. Adding Products to Cart
+1.	Choose Quantity:
+o	Use the quantity selector to choose how many items you want to purchase.
+2.	Add to Cart:
+o	Click the "Add to Cart" button to add the product to your shopping cart.
+3.	View Cart:
+o	A cart icon at the top right will show the number of items in your cart. Click on it to view or edit your cart.
+5. Registering an Account
+1.	Sign Up:
+o	Click on the "Register" link in the navigation bar to create a new account.
+2.	Fill Registration Form:
+o	Enter your details such as name, email, password, and address.
+3.	Submit Form:
+o	Click the "Submit" button to create your account.
+4.	Confirmation:
+o	You will receive a confirmation email. Follow the instructions to verify your email address.
+6. Logging In
+1.	Login:
+o	Click on the "Login" link in the navigation bar.
+2.	Enter Credentials:
+o	Enter your registered email and password.
+3.	Access Account:
+o	Click the "Login" button to access your account dashboard.
+7. Checking Out
+1.	View Cart:
+o	Click on the cart icon and review the items in your cart.
+2.	Proceed to Checkout:
+o	Click the "Checkout" button.
+3.	Enter Shipping Information:
+o	Provide your shipping address and contact details.
+4.	Choose Payment Method:
+o	Select your preferred payment method (e.g., credit card, PayPal).
+5.	Review Order:
+o	Review your order summary and ensure all details are correct.
+6.	Place Order:
+o	Click the "Place Order" button to complete the purchase.
+8. Order Confirmation
+1.	Confirmation Message:
+o	You will see an order confirmation message with the order number.
+2.	Email Confirmation:
+o	A confirmation email will be sent to your registered email address with order details and tracking information.
+9. Post-Purchase Activities
+1.	Track Order:
+o	Use the tracking link provided in the email to monitor the delivery status of your order.
+2.	Review Products:
+o	After receiving your order, you can leave a review on the product page to share your experience.
+3.	Customer Support:
+o	If you have any issues, visit the "Contact Us" page for customer support options.
+

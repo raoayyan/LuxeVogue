@@ -1,94 +1,101 @@
 import { Link } from "react-router-dom";
-import {  useSelector } from "react-redux/es/hooks/useSelector";
+import { useSelector } from "react-redux/es/hooks/useSelector";
 import { styled } from "styled-components";
 import { useDispatch } from "react-redux";
 import { logoutUser } from "../features/authSlice";
 import { toast } from "react-toastify";
-
+import { useState } from "react";
+import { ShoppingCart } from 'lucide-react';
 const Navbar = () => {
   const dispatch = useDispatch();
-  const { cardTotalQuantity } = useSelector((state) => state.cart);
   const auth = useSelector((state) => state.auth);
+  
   return (
-    <nav className="nav-bar">
-      <Link to="/">
-        <h2>LuxeVogue</h2>
-      </Link>
+    
+    <header className="bg-white shadow-sm">
+    <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 className="text-2xl font-bold text-gray-800">TechMart</h1>
+      <nav>
+        <ul className="flex space-x-4">
+        <Link to="/">Home</Link>
+        <Link to="/mobile">Mobiles</Link>
+        <Link to="/laptops">Laptops</Link>
+        </ul>
+      </nav>
       <Link to="/cart">
-        <div className="nav-bag">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="35"
-            height="35"
-            fill="currentColor"
-            className="bi bi-cart"
-            viewBox="0 0 16 16"
-          >
-            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-          </svg>
-          <span className="bag-quantity">
-            <span> {cardTotalQuantity} </span>
-          </span>
-        </div>
-      </Link>
+      <button className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition-colors">
+        <ShoppingCart className="h-5 w-5 text-gray-600" />
+      </button></Link>
       {auth._id ? (
         <Links>
-        {auth.isAdmin ? (
-          <div>
-            <Link to="/admin/summary">Admin</Link>
+          {auth.isAdmin && (
+            <div>
+              <Link className="admin" to="/admin/summary">Admin</Link>
+            </div>
+          )}
+          <div
+            onClick={() => {
+              dispatch(logoutUser(null));
+              toast.warning("Logged out!", { position: "bottom-left" });
+            }}
+          >
+            Logout
           </div>
-        ) : null}
-        <div
-          onClick={() => {
-            dispatch(logoutUser(null));
-            toast.warning("Logged out!", { position: "bottom-left" });
-          }}
-        >
-          Logout
-        </div>
-      </Links>
+        </Links>
       ) : (
         <AuthLinks>
           <Link to="/login">Login</Link>
           <Link to="/register">Register</Link>
         </AuthLinks>
       )}
-    </nav>
+    </div>
+  </header>
+   
   );
 };
 
 export default Navbar;
 
-const Links = styled.div`
-  color: white;
-  display: flex;
 
+const Links = styled.div`
+  display: flex;
+  align-items: center;
+ 
+ color: black;
+ .admin{
+  color: black;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+        color:gray;
+  }
+ }
   div {
     cursor: pointer;
+    color: black;
+    margin-left: 2rem;
+    
 
-    &:last-child {
-      margin-left: 2rem;
+    &:hover {
+      text-decoration: none;
+        color:gray;
     }
   }
 `;
 
 const AuthLinks = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+
   a {
-    &:last-child {
-      margin-left: 2rem;
+    margin-left: 2rem;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+        color:gray;
     }
   }
 `;
-
-// const Links = styled.div`
-//   color: white;
-//   display: flex;
-
-//   div {
-//     cursor: pointer;
-
-//     &:last-child {
-//       margin-left: 2rem;
-//     }
-//   }
-// `;

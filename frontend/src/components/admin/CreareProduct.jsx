@@ -48,6 +48,7 @@ const CreateProduct = ()=>{
             image: productImg,
           })
         );
+      
       };
     
 

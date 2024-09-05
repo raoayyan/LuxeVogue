@@ -10,6 +10,7 @@ import {
 import Navbar from "./components/NavBar";
 import Cart from "./components/Cart";
 import Home from "./components/Home";
+import Mobile from "./components/Mobile";
 import NotFound from "./components/NotFound";
 import { ToastContainer } from "react-toastify";
 import Register from "./components/auth/register";
@@ -35,6 +36,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Home />}></Route>
+          <Route path="/mobile" exact element={<Mobile />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="/checkout-success" element={<CheckoutSuccess />}></Route>
           <Route path="/register" element={<Register />}></Route>
